@@ -2,6 +2,7 @@ param appName string = 'crcbackend'
 param environment string = 'dev'
 param instance int = 003
 param location string = resourceGroup().location
+param COSMOS_TABLEAPI_CONNECTION_STRING string
 
 resource sa 'Microsoft.Storage/storageAccounts@2023-04-01' = {
   name: 'sa${appName}${environment}${instance}'
@@ -52,7 +53,7 @@ resource fa 'Microsoft.Web/sites@2023-12-01' = {
         }
         {
           name: 'COSMOS_TABLEAPI_CONNECTION_STRING'
-          value: 'ConnectionString'
+          value: '${COSMOS_TABLEAPI_CONNECTION_STRING}'
         }
       ]
     }
