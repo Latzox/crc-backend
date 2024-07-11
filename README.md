@@ -1,3 +1,5 @@
+[![Build and Deploy to Azure Functions](https://github.com/Latzox/crc-backend/actions/workflows/build-and-deploy-pipeline.yml/badge.svg)](https://github.com/Latzox/crc-backend/actions/workflows/build-and-deploy-pipeline.yml)
+
 # Cloud Resume Challenge - Backend
 
 This repository contains the backend code for the Cloud Resume Challenge using Azure Functions.
