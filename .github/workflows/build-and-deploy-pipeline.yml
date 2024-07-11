@@ -1,19 +1,20 @@
-name: Deploy Python project to Azure Function App
+name: Build and Deploy to Azure Functions
+
+run-name: >
+  ${{ github.workflow }}: ${{ github.event_name }} for ${{ github.ref_name }} by @${{ github.actor }}
 
 on:
-  push:
-    branches: ["main"]
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_NAME: 'fa-crc-preview-001'   # set this to your function app name on Azure
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'       # set this to the path to your function app project, defaults to the repository root
-  PYTHON_VERSION: '3.9'                     # set this to the python version to use (e.g. '3.6', '3.7', '3.8')
+  AZURE_FUNCTIONAPP_NAME: 'fa-crc-preview-001'
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'
+  PYTHON_VERSION: '3.9'
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment: dev
+    environment: production
     steps:
     - name: 'Checkout GitHub Action'
       uses: actions/checkout@v4
