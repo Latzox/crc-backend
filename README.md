@@ -10,6 +10,7 @@ The Cloud Resume Challenge is a hands-on project to demonstrate your skills in c
 
 This project is divided into three repositories:
 - [crc-frontend](https://github.com/latzox/crc-frontend): Contains the frontend code.
+- [crc-backend](https://github.com/latzox/crc-backend): Contains the backend code.
 - [crc-deploy](https://github.com/latzox/crc-deploy): Contains the infrastructure as code.
 
 ## Structure
